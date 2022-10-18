@@ -1,0 +1,25 @@
+<resources>
+    <!-- Global -->
+    <string name="app_name">Dice Throw App</string>
+
+    <!-- MainActivity -->
+    <string name="main_textView_dice_choice">Choose number of dice you would like to throw</string>
+    <string name="main_button_one_dice">One</string>
+    <string name="main_button_two_dice">Two</string>
+    <string name="main_button_three_dice">Three</string>
+
+    <!-- OneDiceActivity -->
+    <string name="one_dice_textView_device_shake">Shake your device to throw one dice</string>
+    <string name="one_dice_textView_throw_result">Result of one dice throw</string>
+
+    <!-- TwoDiceActivity -->
+    <string name="two_dice_textView_device_shake">Shake your device to throw two dice</string>
+    <string name="two_dice_textView_throw_result">Result of two dice throw</string>
+
+    <!-- TwoDiceActivity -->
+    <string name="three_dice_textView_device_shake">Shake your device to throw three dice</string>
+    <string name="three_dice_textView_throw_result">Result of three dice throw</string>
+
+    <!-- Image descriptions -->
+    <string name="shake_phone_icon">Shake Phone Icon</string>
+</resources>
