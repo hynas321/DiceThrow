@@ -19,21 +19,21 @@ class MainActivity : AppCompatActivity() {
         buttonThreeDice = findViewById(R.id.main_button_three_dice)
 
         buttonOneDice.setOnClickListener {
-            val intent = Intent(this, OneDiceActivity::class.java);
+            val intent = Intent(this, ShakeActivity::class.java)
 
-            startActivity(intent);
+            startActivity(intent)
         }
 
         buttonTwoDice.setOnClickListener {
-            val intent = Intent(this, TwoDiceActivity::class.java);
+            val intent = Intent(this, ShakeActivity::class.java)
 
-            startActivity(intent);
+            startActivity(intent)
         }
 
         buttonThreeDice.setOnClickListener {
-            val intent = Intent(this, ThreeDiceActivity::class.java);
+            val intent = Intent(this, ShakeActivity::class.java)
 
-            startActivity(intent);
+            startActivity(intent)
         }
     }
 }

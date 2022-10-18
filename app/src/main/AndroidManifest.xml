@@ -26,15 +26,11 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".OneDiceActivity"
+            android:name=".ResultActivity"
             android:theme="@style/Theme.DiceThrow">
         </activity>
         <activity
-            android:name=".TwoDiceActivity"
-            android:theme="@style/Theme.DiceThrow">
-        </activity>
-        <activity
-            android:name=".ThreeDiceActivity"
+            android:name=".ShakeActivity"
             android:theme="@style/Theme.DiceThrow">
         </activity>
     </application>
