@@ -23,7 +23,7 @@
         android:id="@+id/main_button_one_dice"
         android:layout_width="200dp"
         android:layout_height="90dp"
-        android:text="@string/main_button_one_dice"
+        android:text="@string/main_button_one_die"
         android:textSize="@dimen/button_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

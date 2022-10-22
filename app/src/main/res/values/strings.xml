@@ -1,10 +1,10 @@
 <resources>
     <!-- Global -->
-    <string name="app_name">Dice Throw App</string>
+    <string name="app_name">Dice Throw</string>
 
     <!-- MainActivity -->
-    <string name="main_textView_dice_choice">Choose number of dice you would like to throw</string>
-    <string name="main_button_one_dice">One</string>
+    <string name="main_textView_dice_choice">Choose number of dice to throw</string>
+    <string name="main_button_one_die">One</string>
     <string name="main_button_two_dice">Two</string>
     <string name="main_button_three_dice">Three</string>
 
@@ -13,7 +13,11 @@
     <string name="shake_button_go_back">Go back</string>
 
     <!-- ResultActivity -->
+    <string name="result_textView_result">Result</string>
+    <string name="result_textView_dots_number">Total number of dots</string>
+    <string name="result_textView_default_result_number">No result</string>
 
     <!-- Image descriptions -->
-    <string name="shake_phone_icon">Shake Phone Icon</string>
+    <string name="image_shake_phone">Shake Phone Image</string>
+    <string name="image_die">Die image</string>
 </resources>
