@@ -16,6 +16,7 @@
     <string name="result_textView_result">Result</string>
     <string name="result_textView_dots_number">Total number of dots</string>
     <string name="result_textView_default_result_number">No result</string>
+    <string name="result_button_go_back">Go back</string>
 
     <!-- Image descriptions -->
     <string name="image_shake_phone">Shake Phone Image</string>

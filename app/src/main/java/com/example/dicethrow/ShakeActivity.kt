@@ -22,13 +22,19 @@ class ShakeActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shake)
+        val receivedExtras = intent.extras
 
-        diceCount = intent.getSerializableExtra("diceCount") as DiceCount
+        if (receivedExtras != null) {
+            diceCount = receivedExtras.getSerializable("diceCount") as DiceCount
+        }
+
         sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
         accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
 
         val vibrator = getSystemService(VIBRATOR_SERVICE) as Vibrator
         val intentResult = Intent(this, ResultActivity::class.java)
+        val extras = Bundle()
+
         val listener = object : SensorEventListener {
 
             override fun onSensorChanged(sensorEvent: SensorEvent?) {
@@ -39,21 +45,10 @@ class ShakeActivity : AppCompatActivity() {
                     if (sensorEvent.values[0] > accelerometerMinimumExpectedValue) {
 
                         sensorManager.unregisterListener(this)
+                        vibrator.vibrate(500)
 
-                        if (diceCount == DiceCount.ONE) {
-                            vibrator.vibrate(200)
-                        }
-                        else if (diceCount == DiceCount.TWO) {
-                            vibrator.vibrate(200)
-                            vibrator.vibrate(200)
-                        }
-                        else if (diceCount == DiceCount.THREE) {
-                            vibrator.vibrate(200)
-                            vibrator.vibrate(200)
-                            vibrator.vibrate(200)
-                        }
-
-                        intent.putExtra("diceCount", diceCount)
+                        extras.putSerializable("diceCount", diceCount)
+                        intentResult.putExtras(extras)
                         startActivity(intentResult)
                     }
                 }

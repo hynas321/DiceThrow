@@ -1,9 +1,9 @@
 package com.example.dicethrow
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var buttonOneDice: Button
@@ -15,25 +15,29 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val intent = Intent(this, ShakeActivity::class.java)
+        val intentShake = Intent(this, ShakeActivity::class.java)
+        val extras = Bundle()
 
         buttonOneDice = findViewById(R.id.main_button_one_dice)
         buttonTwoDice = findViewById(R.id.main_button_two_dice)
         buttonThreeDice = findViewById(R.id.main_button_three_dice)
 
         buttonOneDice.setOnClickListener {
-            intent.putExtra("diceCount", DiceCount.ONE)
-            startActivity(intent)
+            extras.putSerializable("diceCount", DiceCount.ONE)
+            intentShake.putExtras(extras)
+            startActivity(intentShake)
         }
 
         buttonTwoDice.setOnClickListener {
-            intent.putExtra("diceCount", DiceCount.TWO)
-            startActivity(intent)
+            extras.putSerializable("diceCount", DiceCount.TWO)
+            intentShake.putExtras(extras)
+            startActivity(intentShake)
         }
 
         buttonThreeDice.setOnClickListener {
-            intent.putExtra("diceCount", DiceCount.THREE)
-            startActivity(intent)
+            extras.putSerializable("diceCount", DiceCount.THREE)
+            intentShake.putExtras(extras)
+            startActivity(intentShake)
         }
     }
 }
