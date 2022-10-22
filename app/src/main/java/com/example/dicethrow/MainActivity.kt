@@ -40,4 +40,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(intentShake)
         }
     }
+
+    override fun onBackPressed() {
+        moveTaskToBack(true);
+    }
 }

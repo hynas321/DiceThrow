@@ -65,4 +65,10 @@ class ShakeActivity : AppCompatActivity() {
             SensorManager.SENSOR_STATUS_ACCURACY_LOW
         )
     }
+
+    override fun onBackPressed() {
+        val intentMain = Intent(this, MainActivity::class.java)
+
+        startActivity(intentMain)
+    }
 }

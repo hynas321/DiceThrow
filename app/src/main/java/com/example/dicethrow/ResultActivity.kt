@@ -49,7 +49,6 @@ class ResultActivity : AppCompatActivity() {
         val dieThreeDotsCount = Random.nextInt(1, maximumDotsNumber)
         var diceDotsSum = 0
 
-
         when (diceCount) {
             DiceCount.ONE -> {
                 diceDotsSum = dieOneDotsCount
@@ -109,5 +108,14 @@ class ResultActivity : AppCompatActivity() {
             val intentMain = Intent(this, MainActivity::class.java)
             startActivity(intentMain)
         }
+    }
+
+    override fun onBackPressed() {
+        val intentShake = Intent(this, ShakeActivity::class.java)
+        val extras = Bundle()
+
+        extras.putSerializable("diceCount", diceCount)
+        intentShake.putExtras(extras)
+        startActivity(intentShake)
     }
 }
